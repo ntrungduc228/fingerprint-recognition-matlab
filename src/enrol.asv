@@ -145,7 +145,7 @@ id2 = path2(ind:ind+4);
 flat=1;
 if id1==id2
     flat=0;
-    warndlg('Cannot select the same image before!');
+     warndlg('Cannot select the same image before!');
 else
     iddb = person(:,3);
     id_temp = person(:,4);
@@ -171,7 +171,6 @@ else
            break;
        end;
     end;
-end;
 rec1 = struct('Name', name, 'Age', age, 'FID1', id1, 'FID2', id2);
 
 [r] = size(person);
