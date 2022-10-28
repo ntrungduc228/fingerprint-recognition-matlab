@@ -133,7 +133,7 @@ set(hObject, 'string', 'Comparing against database... ');
 drawnow();
 load database person minutiae
 
-uniq = unique(minutiae(:, 1));
+uniq = unique(minutiae(:, 1),'stable');
 r = size(uniq(:, :));
 k = size(minutiae(:, :));
 uniq = table2struct(uniq);

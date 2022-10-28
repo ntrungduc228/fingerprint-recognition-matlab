@@ -147,17 +147,14 @@ id2 = path2(ind:ind+4);
 rec1 = struct('Name', name, 'Age', age, 'FID1', id1, 'FID2', id2);
 
 [r] = size(person);
-w = width(person);
-h = height(person);
 temp_struct = table2struct(person);
-i=2
 
 if r == 0
     temp_struct = rec1;
 else
     temp_struct = [temp_struct; rec1];
 end;
-i=3
+
 person = struct2table(temp_struct);
 
 save database person minutiae
